@@ -11,7 +11,28 @@ pipeline {
             }
             steps {
                 echo "database selected by you is ${DB_Name}"
+                
             }
         }
+        stage('Send email') {
+            
+
+            steps {
+                script {
+
+                def mailRecipients = "praveenvattikuti128@gmail.com"
+                def jobName = currentBuild.fullDisplayName
+
+                emailext body: '''${SCRIPT, template="groovy-html.template"}''',
+                mimeType: 'text/html',
+                subject: "[Jenkins] ${jobName}",
+                to: "${mailRecipients}"
+}
+
+                }
+
+                
+        }
     }
+
 }
