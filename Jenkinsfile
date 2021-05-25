@@ -10,7 +10,7 @@ pipeline {
                 }
             }
             steps {
-                echo "Your favorite color is ${DB_Name}"
+                echo "database selected by you is ${DB_Name}"
             }
         }
     }
