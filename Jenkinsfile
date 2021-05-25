@@ -6,11 +6,11 @@ pipeline {
                 message "Select the DB"
                 ok 'Proceed!'
                 parameters {
-                    extendedChoice defaultValue: 'blue,green,yellow,blue', description: '', descriptionPropertyValue: 'blue,green,yellow,blue', multiSelectDelimiter: ',', name: 'DB_Name', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_MULTI_SELECT', value: 'blue,green,yellow,blue', visibleItemCount: 5
+                    extendedChoice defaultValue: 'test_db1,test_db2,test_db3,test_db4', description: '', descriptionPropertyValue: 'test_db1,test_db2,test_db3,test_db4', multiSelectDelimiter: ',', name: 'DB_Name', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_MULTI_SELECT', value: 'test_db1,test_db2,test_db3,test_db4', visibleItemCount: 5
                 }
             }
             steps {
-                echo "Your favorite color is ${favColor}"
+                echo "Your favorite color is ${DB_Name}"
             }
         }
     }
