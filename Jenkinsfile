@@ -5,7 +5,7 @@ pipeline {
         extendedChoice( 
             name: 'PROJECT', 
             defaultValue: '', 
-            description: 'Sélectionnez le projet à construire.', 
+            description: 'Select the DB', 
             type: 'PT_SINGLE_SELECT', 
             groovyScript: valueKeysScript,
             descriptionGroovyScript: valueNamesScript
