@@ -7,7 +7,7 @@ pipeline {
 
             steps {
                 script {
-                    def datas = readYaml file: 'values.yml'
+                    def datas = readYaml file: 'values.yaml'
                     echo "Got version as ${datas.injector.replicas}"
 
                 }
