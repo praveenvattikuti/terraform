@@ -23,6 +23,11 @@ global:
       seccomp.security.alpha.kubernetes.io/defaultProfileName:  runtime/default
       apparmor.security.beta.kubernetes.io/defaultProfileName:  runtime/default
 
+WPSecretName: amherstcollege-campusdemo-net
+opaqueSecrets:
+  WP_USER: MTQ2ODVfYW1oZXJzdGNvbA==
+  WP_PASSWORD: em4xMEdJVF43Xg==
+  
 injector:
   # True if you want to enable vault agent injection.
   enabled: true
