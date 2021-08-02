@@ -9,6 +9,8 @@ pipeline {
                 script {
 
                      println('Hello World')
+                    def datas = readYaml file: 'values.yml'
+                    echo "Got version as ${datas.injector.replicas}"
 
                 }
             }
